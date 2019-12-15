@@ -1,0 +1,47 @@
+body{
+	background-color: #91271d;
+}
+
+p, h5, h1 {
+	color: white;
+}
+
+.header{
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	text-align: center;
+}
+
+h1.header{
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+h4.header{
+	font-style: italic;
+	font-weight: 900;
+}
+
+.audiovideo{
+	text-decoration: underline;
+	text-decoration-color: white;
+	text-align: center;
+}
+
+.table{
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+.special_p{
+	width: 300px;
+  	height: 100px;
+  	padding: 15px;
+  	background-color: red;
+  	box-shadow: 10px 10px 5px white;
+  	text-align: center;
+}
+
+.links{
+	text-align: center;
+}
