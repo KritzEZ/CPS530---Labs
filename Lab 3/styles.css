@@ -1,0 +1,26 @@
+.menu h4, .menu p {
+	text-align: center;
+	color: white;
+}
+
+.main p, .main h1, .main img {
+	text-align: center;
+	color: white;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+	text-align: center;
+	color: white;
+}
+
+#button {
+	background-image: url(button.jpg); ;
+}
+
+body {
+	background-image: url(background.jpg);
+	color: white;
+}
