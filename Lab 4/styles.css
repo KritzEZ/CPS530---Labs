@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+body {
+	background-image: url(background.jpg);
+	text-align: center;
+	font-family: 'Courgette', cursive;
+	color: white;
+	font-size: 150%;
+	vertical-align: middle;
+
+}
