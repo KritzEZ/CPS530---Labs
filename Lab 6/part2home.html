@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 6 - Part 2</title>
+	<script type="text/javascript">
+	<!--
+		function validateForm() {
+			var name = document.forms["lab6part1"]["name"].value;
+			var address = document.forms["lab6part1"]["address"].value;
+			var phonenumber = document.forms["lab6part1"]["number"].value;
+
+			var addressformat = new RegExp('[A-Za-z0-9]+$');
+			var nameformat = new RegExp('[A-Za-z]+$');
+			var phonenumberformat = new RegExp('[0-9]{3}-[0-9]{3}-[0-9]{4}');
+
+			if (nameformat.exec(name)) {
+				if (phonenumberformat.exec(phonenumber)) {
+					if (addressformat.exce(address)) {
+						return true;
+					}	
+					else {
+						alert("Your Address Should Only Contain Letters And Numbers");
+						return false;
+					}
+				} 
+				else {
+					alert("Enter Your Format In The Following Format: XXX-XXX-XXXX");
+					return false;
+				}
+  			} 
+  			else {
+				alert("Your Name Must Only Contain Letters");
+   				return false;
+			}
+		}
+	//-->
+	</script>
+</head>
+<body>
+	<form name="lab6part1" onsubmit="return validateForm()" method="get">
+		Enter Your Name: <input type="text" name="name"><br>
+		Enter Your Address: <input type="text" name="address"><br>
+		Enter Your Phone Number: <input type="text" name="number" placeholder="Format: XXX-XXX-XXXX"><br>
+		<button type="submit" formaction="/~k38shah/cgi-bin/part2ruby.rb">Submit Ruby Version</button>
+		<button type="submit" formaction="/~k38shah/cgi-bin/part2python.py">Submit Python Version</button>
+		
+	</form>
+</body>
+</html>
