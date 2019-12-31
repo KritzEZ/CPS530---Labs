@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CPS530 - Lab 7</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$('#body').draggable();
+			$('#eyes').draggable();
+			$('#nose').draggable();
+			$('#mouth').draggable();
+			$('#mustache').draggable();
+			$('#hat').draggable();
+		});
+	</script>
+	<style type="text/css">
+		canvas {
+		    padding-left: 0;
+		    padding-right: 0;
+		    margin-left: auto;
+		    margin-right: auto;
+		    display: block;
+		}
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Drag the body parts to create your Mr. Potato in the box!</h1>
+	
+	<img src="pothead.png" id="body">
+	<img src="poteyes.png" id="eyes">
+	<img src="potnose.png" id="nose">
+	<img src="potmouth.png" id="mouth" height=70px width=100px>
+	<img src="potmous.png" id="mustache">
+	<img src="pothat.png" id="hat">
+
+	<canvas id="myCanvas" width="500" height="500" style="border:3px solid black;" >
+		Your Browser does not suppoer the HTML5 canvas tag.
+	</canvas>
+
+</body>
+</html>
