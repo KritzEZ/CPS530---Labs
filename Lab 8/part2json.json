@@ -1,0 +1,55 @@
+{
+   "response": {
+      "data": {
+         "item": {
+            "title": "Yimago 2 / Hawaiian Music Radio",
+            "song": "Carole and Florent Atem - Ku'u Home O Kahalu'u [2002]",
+            "track": {
+               "artist": "Carole and Florent Atem",
+               "title": "Ku'u Home O Kahalu'u [2002]",
+               "album": "Hawaiian Style 2",
+               "royaltytrackid": "0",
+               "started": "1574732787",
+               "id": "42951",
+               "length": "0",
+               "playlist": {
+                  "id": "1579",
+                  "title": "Y2 > General"
+               },
+               "buyurl": "",
+               "imageurl": "https://cps-static.rovicorp.com/3/JPG_1080/MI0000/367/MI0000367058.jpg?partner=allrovi.com"
+            },
+            "bitrate": "64 Kbps",
+            "server": "Online",
+            "autodj": "Online",
+            "source": "Yes",
+            "offline": "",
+            "summary": {
+               "a": {
+                  "_href": "http://199.195.194.92:2199/tunein/-stream/meyima03.pls",
+                  "__text": ";Yimago 2 / Hawaiian Music Radio - Carole and Florent Atem - Ku'u Home O Kahalu'u [2002]"
+               }
+            },
+            "listeners": "2",
+            "maxlisteners": "100",
+            "reseller": "0",
+            "serverstate": "1",
+            "sourcestate": "1",
+            "sourceconn": "1",
+            "date": "Nov 25, 2019",
+            "time": "03:48 PM",
+            "rawmeta": "Carole and Florent Atem - Ku'u Home O Kahalu'u [2002]",
+            "mountpoint": "/stream",
+            "tuneinurl": "http://199.195.194.94:8183/stream",
+            "directtuneinurl": "",
+            "proxytuneinurl": "",
+            "tuneinformat": "aac",
+            "webplayer": "muses",
+            "servertype": "ShoutCast2",
+            "listenertotal": "2",
+            "url": "http://199.195.194.92:2199/rpc"
+         }
+      },
+      "_type": "result"
+   }
+}

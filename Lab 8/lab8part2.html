@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 8 - Part 2</title>
+<link rel="stylesheet" type="text/css" href="lab8part1.css">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="header">
+<h1>Welcome To <br> <span id="title"></span></h1>
+<p>Current Song Playing <br> <span id="song"></span></p>
+</div>
+<img class="link">
+
+<div id="section1">
+  <p>Artist: <span id= "artist"></span></p>
+  <p>Title: <span id= "title2"></span></p>
+  <p>Album: <span id= "album"></span></p>
+</div>
+
+<div id="section2">
+  <p>Bitrate: <span id="bitrate"></span></p>
+  <p>Server: <span id="server"></span></p>
+  <p>Auto DJ: <span id="autodj"></span></p>
+  <p>Source: <span id="source"></span></p>
+  <p>Listeners: <span id="listeners"></span></p>
+  <p>Max Listeners: <span id="maxlisteners"></span></p>
+  <p>Resellers: <span id="reseller"></span></p>
+  <p>Server State: <span id="serverstate"></span></p>
+  <p>Source State: <span id="sourcestate"></span></p>
+  <p>Sounrce Connection: <span id="sourceconn"></span></p>
+  <p>Date: <span id="date"></span></p>
+  <p>Time: <span id="time"></span></p>
+  <p>Raw Meta: <span id="rawmeta"></span></p>
+  <p>Mount Point: <span id="mountpoint"></span></p>
+  <p>Tune in URL: <span id="tuneinurl"></span></p>
+  <p>Tune in Format: <span id="tuneinformat"></span></p>
+  <p>Web Player: <span id="webplayer"></span></p>
+  <p>Server Type: <span id="servertype"></span></p>
+  <p>Listener Total: <span id="listenertotal"></span></p>
+  <p>URL: <span id="url"></span></p>
+</div>
+<script type="text/javascript">
+  $.getJSON('part2json.json', function(json) {
+    console.log(json);
+    document.getElementById("title").innerHTML = json.response.data.item.title;
+    document.getElementById("song").innerHTML = json.response.data.item.song;
+    document.getElementById("artist").innerHTML = json.response.data.item.track.artist;
+    document.getElementById("title2").innerHTML = json.response.data.item.track.title;
+    document.getElementById("album").innerHTML = json.response.data.item.track.album;
+    document.getElementById("bitrate").innerHTML = json.response.data.item.bitrate;
+    document.getElementById("server").innerHTML = json.response.data.item.server;
+    document.getElementById("autodj").innerHTML = json.response.data.item.autodj;
+    document.getElementById("source").innerHTML = json.response.data.item.source;
+    document.getElementById("listeners").innerHTML = json.response.data.item.listeners;
+    document.getElementById("maxlisteners").innerHTML = json.response.data.item.maxlisteners;
+    document.getElementById("reseller").innerHTML = json.response.data.item.reseller;
+    document.getElementById("serverstate").innerHTML = json.response.data.item.serverstate;
+    document.getElementById("sourcestate").innerHTML = json.response.data.item.sourcestate;
+    document.getElementById("sourceconn").innerHTML = json.response.data.item.sourceconn;
+    document.getElementById("date").innerHTML = json.response.data.item.date;
+    document.getElementById("time").innerHTML = json.response.data.item.time;
+    document.getElementById("rawmeta").innerHTML = json.response.data.item.rawmeta;
+    document.getElementById("mountpoint").innerHTML = json.response.data.item.mountpoint;
+    document.getElementById("tuneinurl").innerHTML = json.response.data.item.tuneinurl;
+    document.getElementById("tuneinformat").innerHTML = json.response.data.item.tuneinformat;
+    document.getElementById("webplayer").innerHTML = json.response.data.item.webplayer;
+    document.getElementById("servertype").innerHTML = json.response.data.item.servertype;
+    document.getElementById("listenertotal").innerHTML = json.response.data.item.listenertotal;
+    document.getElementById("url").innerHTML = json.response.data.item.url;
+    var imgVar = json.response.data.item.track.imageurl;
+    document.querySelector(".link").src = imgVar;
+  });
+</script>
+</body>
+</html>
