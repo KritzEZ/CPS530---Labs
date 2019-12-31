@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 8 - Part 1</title>
+<link rel="stylesheet" type="text/css" href="lab8part1.css">
+</head>
+<body>
+<div id="header">
+<h1>Welcome To <br> <span id="title"></span></h1>
+<p>Current Song Playing <br> <span id="song"></span></p>
+</div>
+<img class="link">
+
+<div id="section1">
+  <p>Artist: <span id= "artist"></span></p>
+  <p>Title: <span id= "title2"></span></p>
+  <p>Album: <span id= "album"></span></p>
+</div>
+
+<div id="section2">
+  <p>Bitrate: <span id= "bitrate"></span></p>
+  <p>Server: <span id= "server"></span></p>
+  <p>Auto DJ: <span id= "autodj"></span></p>
+  <p>Source: <span id= "source"></span></p>
+  <p>Listeners: <span id= "listeners"></span></p>
+  <p>Max Listeners: <span id= "maxlisteners"></span></p>
+  <p>Resellers: <span id= "reseller"></span></p>
+  <p>Server State: <span id= "serverstate"></span></p>
+  <p>Source State: <span id= "sourcestate"></span></p>
+  <p>Sounrce Connection: <span id= "sourceconn"></span></p>
+  <p>Date: <span id= "date"></span></p>
+  <p>Time: <span id= "time"></span></p>
+  <p>Raw Meta: <span id= "rawmeta"></span></p>
+  <p>Mount Point: <span id= "mountpoint"></span></p>
+  <p>Tune in URL: <span id= "tuneinurl"></span></p>
+  <p>Tune in Format: <span id= "tuneinformat"></span></p>
+  <p>Web Player: <span id= "webplayer"></span></p>
+  <p>Server Type: <span id= "servertype"></span></p>
+  <p>Listener Total: <span id= "listenertotal"></span></p>
+  <p>URL: <span id= "url"></span></p>
+</div>
+<script>
+  setInterval(function() {
+                  window.location.reload();
+                }, 300000); 
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+  	if (this.readyState == 4 && this.status == 200) 
+  	{
+  		getAllInfo(this);
+  	}
+  };
+
+  xmlhttp.open("GET", "http://199.195.194.92:2199/rpc/meyima03/streaminfo.get?x=1", true);
+  xmlhttp.send();
+
+  function getAllInfo(xml) {
+    var x, xmlDoc = xml.responseXML;
+    document.getElementById("title").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    document.getElementById("song").innerHTML = xmlDoc.getElementsByTagName("song")[0].childNodes[0].nodeValue;
+    document.getElementById("artist").innerHTML = xmlDoc.getElementsByTagName("artist")[0].childNodes[0].nodeValue;
+    document.getElementById("title2").innerHTML = xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+    document.getElementById("album").innerHTML = xmlDoc.getElementsByTagName("album")[0].childNodes[0].nodeValue;
+    document.getElementById("bitrate").innerHTML = xmlDoc.getElementsByTagName("bitrate")[0].childNodes[0].nodeValue;
+    document.getElementById("server").innerHTML = xmlDoc.getElementsByTagName("server")[0].childNodes[0].nodeValue;
+    document.getElementById("autodj").innerHTML = xmlDoc.getElementsByTagName("autodj")[0].childNodes[0].nodeValue;
+    document.getElementById("source").innerHTML = xmlDoc.getElementsByTagName("source")[0].childNodes[0].nodeValue;
+    document.getElementById("listeners").innerHTML = xmlDoc.getElementsByTagName("listeners")[0].childNodes[0].nodeValue;
+    document.getElementById("maxlisteners").innerHTML = xmlDoc.getElementsByTagName("maxlisteners")[0].childNodes[0].nodeValue;
+    document.getElementById("reseller").innerHTML = xmlDoc.getElementsByTagName("reseller")[0].childNodes[0].nodeValue;
+    document.getElementById("serverstate").innerHTML = xmlDoc.getElementsByTagName("serverstate")[0].childNodes[0].nodeValue;
+    document.getElementById("sourcestate").innerHTML = xmlDoc.getElementsByTagName("sourcestate")[0].childNodes[0].nodeValue;
+    document.getElementById("sourceconn").innerHTML = xmlDoc.getElementsByTagName("sourceconn")[0].childNodes[0].nodeValue;
+    document.getElementById("date").innerHTML = xmlDoc.getElementsByTagName("date")[0].childNodes[0].nodeValue;
+    document.getElementById("time").innerHTML = xmlDoc.getElementsByTagName("time")[0].childNodes[0].nodeValue;
+    document.getElementById("rawmeta").innerHTML = xmlDoc.getElementsByTagName("rawmeta")[0].childNodes[0].nodeValue;
+    document.getElementById("mountpoint").innerHTML = xmlDoc.getElementsByTagName("mountpoint")[0].childNodes[0].nodeValue;
+    document.getElementById("tuneinurl").innerHTML = xmlDoc.getElementsByTagName("tuneinurl")[0].childNodes[0].nodeValue;
+    document.getElementById("tuneinformat").innerHTML = xmlDoc.getElementsByTagName("tuneinformat")[0].childNodes[0].nodeValue;
+    document.getElementById("webplayer").innerHTML = xmlDoc.getElementsByTagName("webplayer")[0].childNodes[0].nodeValue;
+    document.getElementById("servertype").innerHTML = xmlDoc.getElementsByTagName("servertype")[0].childNodes[0].nodeValue;
+    document.getElementById("listenertotal").innerHTML = xmlDoc.getElementsByTagName("listenertotal")[0].childNodes[0].nodeValue;
+    document.getElementById("url").innerHTML = xmlDoc.getElementsByTagName("url")[0].childNodes[0].nodeValue;
+    var imgVar = xmlDoc.getElementsByTagName("imageurl")[0].childNodes[0].nodeValue;
+    document.querySelector(".link").src = imgVar;
+  }
+</script>
+</body>
+</html>
