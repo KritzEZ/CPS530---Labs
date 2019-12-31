@@ -1,0 +1,35 @@
+body 
+{
+	text-align:center;
+	background-image: url("https://media.giphy.com/media/WRpJVMsyJC2CIu48Lu/giphy.gif");
+}
+
+img 
+{
+	height: 300px;
+	width: 300px;
+}
+
+#a1 
+{
+	background-color:black;
+	outline-style: groove;
+	color: red;
+	font-size: 50px;
+}
+
+#a2
+{
+	background-color:black;
+	outline-style: groove;
+	color: white;
+        font-size: 30px;
+}
+
+#a3
+{
+	background-color:black;
+	outline-style: groove;
+	color: #00FFFF;
+        font-size: 20px;
+}
